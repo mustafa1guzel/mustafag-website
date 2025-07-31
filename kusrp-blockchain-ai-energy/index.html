@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>KUSRP: Blockchain and AI-Assisted Internet of Energy Systems</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Georgia, serif;
+      background-color: white;
+      color: #333;
+      display: flex;
+    }
+    nav {
+      width: 180px;
+      padding: 2rem 1rem;
+      background: white;
+      border-right: 1px solid #ddd;
+    }
+    nav h1 {
+      font-size: 1.4rem;
+      font-weight: bold;
+      margin-bottom: 2rem;
+      text-decoration: underline;
+    }
+    nav a {
+      display: block;
+      font-size: 1rem;
+      margin: 0.4rem 0;
+      text-decoration: none;
+      color: #222;
+    }
+    nav a:hover {
+      color: #007acc;
+    }
+    main {
+      padding: 2rem;
+      max-width: 700px;
+    }
+    h2 {
+      font-size: 1.7rem;
+      margin-top: 0;
+    }
+    h3 {
+      font-size: 1.3rem;
+      margin-top: 2rem;
+    }
+    p {
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+    img {
+      max-width: 100%;
+      margin: 1rem 0;
+      border: 1px solid #ccc;
+    }
+    a {
+      color: #007acc;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <h1>Mustafa Güzel</h1>
+    <a href="/about/">About</a>
+    <a href="/publications/">Publications</a>
+    <a href="/blog/">Blog</a>
+    <a href="/personal/">Personal</a>
+  </nav>
+
+  <main>
+    <h2>KUSRP: Blockchain and AI-Assisted Internet of Energy Systems</h2>
+    <p><strong>Note:</strong> This page is a summary of an independent research experience and is not a published article.</p>
+
+    <p>
+      This project was part of the Koç University Summer Research Program (KUSRP), a research-focused internship program designed for high school and undergraduate students. I participated as a high school student and carried out the work independently.
+    </p>
+
+    <p>
+      The main focus of my project was the intersection of artificial intelligence, federated learning, blockchain technologies, and their combined role in future Internet of Energy (IoE) systems. My journey began by deeply exploring the core principles of federated learning — a decentralized machine learning method where data remains local while models are collaboratively trained across edge devices.
+    </p>
+
+    <p>
+      I studied the use cases of federated learning in energy systems, particularly for privacy-preserving load forecasting, anomaly detection, and intelligent grid decision-making. These systems require high levels of coordination and fault tolerance. That's when I discovered the significance of consensus protocols — and particularly, the <strong>Raft Consensus Algorithm</strong>.
+    </p>
+
+    <h3>Understanding Raft</h3>
+
+    <p>
+      Raft is a distributed consensus protocol used to maintain consistency across a network of nodes. I studied its leader election process, log replication mechanics, and failure recovery properties. This learning was critical for understanding how energy nodes in an IoE system could stay synchronized while still being decentralized.
+    </p>
+
+    <img src="raft.png" alt="Raft Consensus Illustration" />
+
+    <p>
+      The above illustration offers a simplified view of the Raft architecture. The <strong>Leader</strong> is at the center, coordinating multiple <strong>Followers</strong>, and also handling requests from a <strong>Client</strong>. Each arrow symbolizes communication flows — such as log replication or heartbeat messages — which are crucial for maintaining a consistent state across the system.
+    </p>
+
+    <p>
+      In energy networks, Raft can be used to ensure reliable coordination between distributed controllers, such as smart meters or energy hubs. These units can remain in sync without depending on a central authority, thus improving system resilience.
+    </p>
+
+    <p>
+      I also implemented a basic <a href="https://github.com/mustafa1guzel/raft-consensus-simulation-python" target="_blank">Python simulation of Raft</a> to better understand how leader elections and failure handling play out in real time.
+    </p>
+
+    <h3>EV Charging Optimization</h3>
+
+    <p>
+      After building a foundation in distributed coordination and learning techniques, I explored how AI could be used to optimize energy distribution in practice. I worked with a real-world dataset from Kaggle:
+      <a href="https://www.kaggle.com/datasets/venkatsairo4899/ev-charging-station-usage-of-california-city" target="_blank">
+        EV Charging Station Usage of California City
+      </a>.
+    </p>
+
+    <p>
+      I developed a Python-based clustering and location-optimization algorithm to recommend optimal placements for new EV charging stations. The algorithm aimed to reduce the average distance users would travel to charge, while also balancing load across the network.
+    </p>
+
+    <img src="paloalto.png" alt="Palo Alto Optimization Output" />
+
+    <p>
+      The image above shows an example output centered on Palo Alto. It visualizes optimal charging station zones based on usage data and geographic distribution.
+    </p>
+
+    <p>
+      Full source code and methodology can be found here:
+      <a href="https://github.com/mustafa1guzel/ev-charging-optimization-python" target="_blank">
+        EV Charging Optimization on GitHub
+      </a>.
+    </p>
+
+    <h3>Reflection</h3>
+    <p>
+      This independent project allowed me to connect multiple areas I’m passionate about: decentralized systems, machine learning, and energy sustainability. I was especially drawn to the practical and ethical implications of designing intelligent, decentralized infrastructures. Going forward, I hope to explore real-world deployments of such systems and work toward more scalable, secure, and environmentally aware energy solutions.
+    </p>
+
+    <p><strong>Keywords:</strong> Blockchain, Artificial Intelligence, Federated Learning, Internet of Energy, Raft Consensus, Electric Vehicles, Optimization, KUSRP</p>
+  </main>
+
+</body>
+</html>
